@@ -1,16 +1,39 @@
 # Base vagrant definition
 
-class vagrant {
-  include php 
-  include php::dev 
-  include mysql {
-    $mysqlpassword => ''
-  }
-  include mysql::dev
-  include webadmin {
-    $webadminuser => "vagrant",
-    $webadmingroup => "vagrant"
+stage {
+  'prerun': before => Stage['main'];
+}
+
+class prerun {
+  group { 'puppet': ensure => 'present' }
+
+  # Bad things happen if apt-get update is not run on ubuntu initially.
+  exec { 'apt-get update':
+    command => '/usr/bin/apt-get update'
   }
 }
 
-include vagrant 
+class vagrant {
+  class { 'php53':
+    webadminuser => 'vagrant',
+    webadmingroup => 'vagrant'
+  }
+  include php53::dev 
+  class { 'mysql5':
+    mysqlpassword => '',
+    webadminuser => 'vagrant',
+    webadmingroup => 'vagrant'
+  }
+  include mysql5::dev 
+  class { 'webadmin':
+    webadminuser => 'vagrant',
+    webadmingroup => 'vagrant'
+  }
+}
+
+class {
+  "prerun": stage => prerun;
+  "vagrant": stage => main;
+}
+
+#include vagrant 

@@ -6,7 +6,8 @@ Vagrant::Config.run do |config|
 
   config.vm.network :hostonly, "33.33.33.33"
 
-  config.vm.share_folder("web", "/var/www", "web")
+  # Change to preferred file location.
+  #config.vm.share_folder("web", "/var/www", "web")
 
  config.vm.provision :puppet do |puppet|
     puppet.manifests_path = "manifests"
