@@ -7,3 +7,6 @@
 [submodule "modules/webadmin"]
 	path = modules/webadmin
 	url = https://github.com/zivtech/puppet-webadmin
+[submodule "modules/drush"]
+	path = modules/drush
+	url = https://github.com/jvc26/puppet-drush.git
