@@ -29,6 +29,7 @@ class vagrant {
     webadminuser => 'vagrant',
     webadmingroup => 'vagrant'
   }
+  include webadmin::dev
   include drush
 }
 
