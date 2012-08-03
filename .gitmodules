@@ -1,6 +1,6 @@
 [submodule "modules/php53"]
 	path = modules/php53
-	url = https://github.com/zivtech/puppet-php53
+	url = https://github.com/acouch/puppet-php53
 [submodule "modules/mysql5"]
 	path = modules/mysql5
 	url = https://github.com/acouch/puppet-mysql5
