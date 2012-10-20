@@ -7,7 +7,7 @@ Instructions
 
 2) Clone this repository.
 
-3) Grab the submodules ("gitsubmodule update").
+3) Grab the submodules ("git submodule update --init").
 
 4) Type "vagrant up" to start your new virtual server.
 
