@@ -12,4 +12,4 @@
 	url = https://github.com/acouch/puppet-drush.git
 [submodule "modules/nuams"]
 	path = modules/nuams
-	url = git@github.com:nuams/nuams_puppet.git
+	url = git@github.com:nuams/nuams_puppet_module.git
