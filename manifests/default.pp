@@ -19,6 +19,7 @@ class vagrant {
     webadmingroup => 'vagrant'
   }
   include php53::dev 
+  include php53::mongo 
   class { 'mysql5':
     mysqlpassword => '',
     webadminuser => 'vagrant',
