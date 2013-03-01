@@ -1,6 +1,6 @@
 Vagrant::Config.run do |config|
   config.vm.box = "nuams-precise32"
-  config.vm.box_url = "/Users/aaron/vagrant/vagrant-test/nuams-precise32.box"
+  config.vm.box_url = "http://files.nuamsdev.com/nuams-precise32.box"
 
   config.vm.customize ["modifyvm", :id, "--memory", "1024"]
 
