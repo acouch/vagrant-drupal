@@ -9,7 +9,7 @@ Vagrant::Config.run do |config|
   # Remove this if you don't have access to nuams repo.
   config.ssh.private_key_path = "modules/nuams/files/id_dsa"
   # Change to preferred file location.
-  #config.vm.share_folder("web", "/var/www", "web")
+  #config.vm.share_folder("web", "/var/www", "web", :extra => 'dmode=770,fmode=770')
 
  config.vm.provision :puppet do |puppet|
     puppet.manifests_path = "manifests"
