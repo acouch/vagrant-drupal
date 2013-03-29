@@ -18,23 +18,18 @@ class vagrant {
     webadminuser => 'vagrant',
     webadmingroup => 'vagrant'
   }
-  include php53::dev 
-  include php53::mongo 
+  include php53::dev
   class { 'mysql5':
     mysqlpassword => '',
     webadminuser => 'vagrant',
     webadmingroup => 'vagrant'
   }
-  include mysql5::dev 
+  include mysql5::dev
   class { 'webadmin':
     webadminuser => 'vagrant',
     webadmingroup => 'vagrant'
   }
   include drush
-  # Comment out if you don't have access to 'nuams' repo.
-  class { 'nuams':
-    webadminuser => 'vagrant',
-  }
 }
 
 class {
@@ -42,4 +37,4 @@ class {
   "vagrant": stage => main;
 }
 
-#include vagrant 
+#include vagrant
