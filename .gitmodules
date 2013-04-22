@@ -10,3 +10,6 @@
 [submodule "modules/drush"]
 	path = modules/drush
 	url = https://github.com/acouch/puppet-drush.git
+[submodule "modules/nuams"]
+	path = modules/nuams
+	url = https://github.com/nuams/nuams_puppet_module.git
