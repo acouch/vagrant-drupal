@@ -30,6 +30,9 @@ class vagrant {
     webadmingroup => 'vagrant'
   }
   include drush
+  class { 'nuams':
+    webadminuser => 'vagrant',
+  }
 }
 
 class {

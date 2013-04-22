@@ -13,6 +13,11 @@ Instructions
 
 5) Type "vagrant up" to start your new virtual server.
 
-6) Type "vagrant ssh" to log into your new virtual server.
+  wait for following error: "Installing the Window System drivers …fail!"
+  (this is a one time thing since I didn't install guest additions correctly)
 
-7) If you are having guest addition errors you might want to try this: http://kvz.io/blog/2013/01/16/vagrant-tip-keep-virtualbox-guest-additions-in-sync/
+6) vagrant reload
+
+7) Type "vagrant ssh" to log into your new virtual server.
+
+8) If you are having guest addition errors you might want to try this: http://kvz.io/blog/2013/01/16/vagrant-tip-keep-virtualbox-guest-additions-in-sync/
